@@ -173,6 +173,12 @@ p{
 	text-align: center;
 	color: black;
 }
+p{
+	font-size: 12px;
+	font-size: times new roman;
+	text-align: center;
+	color: black;
+}
 summary{
 	color: orange;
 	text-transform: uppercase;
