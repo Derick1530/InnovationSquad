@@ -167,10 +167,22 @@ a{
 		display: flex;
 	}
 }
+p{
+	font-size: 12px;
+	font-size: times new roman;
+	text-align: center;
+	color: black;
+}
+summary{
+	color: orange;
+	text-transform: uppercase;
+	font-family: times new roman;
+}
 footer{
-		font-family: fantasy;
+	font-family: fantasy;
 	font-size: 18px;
 	font-weight: bold;
+	margin-top: 200px;
 }
 footer p{
 	text-align: center;
