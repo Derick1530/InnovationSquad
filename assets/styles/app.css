@@ -1,4 +1,9 @@
-
+*{
+	font-family: 'Rubik', sans-serif;;
+}
+body{
+	font-family: 'Rubik', sans-serif;;
+}
 .logo{
 	height: 80px;
 	width: 200px;
@@ -49,8 +54,6 @@ div.row{
 h2{
 	text-align: center;
 	color: orange;
-	font: fantasy;
-	font-style: italic;
 }
 h6{
 	color: orange;
