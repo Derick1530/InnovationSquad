@@ -31,7 +31,7 @@ img.d-block.w-100{
 	width: 12rem;
 	height: 18rem;
 }
-div.row{
+div.row.iSquad{
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -162,7 +162,7 @@ a{
 	}
 }
 p{
-	font-size: 18px;
+	font-size: 16px;
 	font-size: rubik;
 	text-align: center;
 	color: black;
