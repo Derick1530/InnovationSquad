@@ -1,8 +1,31 @@
+/* VARIABLE */
+
+:root {
+
+  --clr-background:white;
+  --clr-toggle:rgb(255, 255, 255);
+  --clr-border:black;
+  --clr-name:chocolate;
+  --clr-backtoggle:rgb(46, 0, 0);
+  --clr-base:chocolate;
+  --clr-hover:black;
+  --clr-grey:rgb(78, 78, 78);
+  --clr-gray: #ffffff; 
+  --clr-git:rgb(32, 32, 32); 
+  --font-size: 16px;
+  --border-radius: 0.2em;
+}
+
+/* ENDS */
+
 * {
   font-family: "Rubik", sans-serif;
+  margin:0px;
 }
 body {
+
   font-family: "Rubik", sans-serif;
+  background-color: var(--clr-background);
 }
 
 /* COVER IMAGE */
@@ -22,6 +45,8 @@ img.Squad-logo {
 .navbar {
   width: 100vw;
   margin: 0;
+  background-color: white;
+  
 }
 .navbar ul {
   list-style: none;
@@ -44,16 +69,90 @@ img.Squad-logo {
 }
 .navbar ul li a {
   text-decoration: none;
-  color: chocolate;
+  color: var(--clr-base);
 }
 
 .navbar ul li a:hover {
-  color: black;
+  color: var(--clr-hover);
 }
 
 /* navbar END */
 
-/* CSS team card START */
+/* DARKMODE STARTS */
+.dark-mode {
+  --clr-backtoggle:rgb(255, 255, 255);
+  --clr-name:white;
+  --clr-toggle:rgb(46, 0, 0);
+  --clr-background: #000000;
+  --clr-base: chocolate;
+  --clr-border:white;
+  --clr-primary: #ff9100;
+  --clr-gray: #1a1a1a;
+  --clr-grey: #ffffff;
+  --clr-git:rgb(255, 255, 255); 
+}
+
+
+
+.wrapper-color-switch {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.color-switch {
+  width: 4em;
+  height: 2em;
+  border-radius: 10em;
+  background: var(--clr-backtoggle);
+  border: 2px solid var(--clr-border);
+  position: absolute;
+  cursor: pointer;
+}
+
+hr{
+  width: 80%;
+ margin: 0 auto ;
+}
+.color-switch-toggle {
+  width: 1.6em;
+  height: 1.6em;
+  background: var(--clr-toggle);
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.2em;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.color-switch::before {
+  content: "Light Mode On";
+  color: var(--clr-name);
+  position: absolute;
+  display: inline-block;
+  width: 12em;
+  left: -8em;
+  top: 0.4em;
+}
+
+#input-color-switch:checked ~ label .color-switch-toggle {
+  transform: translatex(2em);
+}
+
+#input-color-switch:checked ~ .color-switch::before {
+  content: "Dark Mode On";
+}
+
+#input-color-switch {
+  display: none;
+}
+/* DARKMODE ENDS */
+
+
+/* CSS team card STARTS */
 
 .container {
 
@@ -67,7 +166,7 @@ img.Squad-logo {
 .box{
   width: 50px;
   text-align: center;
-  background-color:white ;
+  background-color:var(--clr-gray);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   margin: 0 10px ;
   padding:20px;
@@ -78,10 +177,19 @@ img.Squad-logo {
   border-radius: 10%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
+
+.box:hover h3{
+  color: #ca6d03;
+}
+
 .box img:hover{
   transform: translateY(-10px);
 	box-shadow: -10px 5px 0px #ca6d03;
 
+}
+
+.desc{
+  color: var(--clr-grey);
 }
 /* CSS team card END */
 
@@ -90,12 +198,15 @@ img.Squad-logo {
   justify-content: space-around;
 }
 .icon{
+  color: var(--clr-git);
  padding: 12px;
  font-size: 20px;
 }
 .tit{
+  padding:10px;
+  margin-bottom: 3rem;
   text-align: center;
-  color: #ca6d03;
+  color: var(--clr-name);
 }
 
 footer{
@@ -103,3 +214,4 @@ footer{
   display: flex;
   justify-content: center;
 }
+
